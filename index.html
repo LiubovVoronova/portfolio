@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <link rel="stylesheet" href="style.css">    
     <title>LVPortfoilo</title>
 </head>
-<body class="grid-container">    
-        <header>
-            <nav class="main-menu">
-                <ul>
-                    <li>Главная</li>
-                    <li>Навыки</li>
-                    <li>Контакты</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="content">
+<body class="grid-container">  
+    <header>   
+        <div class='logo'>
+            <h1>Любовь Воронова</h1>
+            <p>web-разработчик</p>
+        </div>
+        
+    </header>                              
+    <main>        
+        <nav class="main-menu">            
+                <ul class="top-menu">
+                    <li class="menu-item"><a href="index.html">Главная</a></li>
+                    <li class="menu-item"> Навыки
+                        <ul class="sub-menu">
+                            <li>Формы</li>
+                            <li>Галерея</li>
+                            <li>Новое</li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"> Проекты
+                        <ul class="sub-menu">
+                            <li><a href="http://www.super-duper-radio.ml/" target="_blank">Спорт-радио</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                </ul>            
+        </nav>
+        <div class='content'>
 
-            </div>   
-        </main>
-        <aside>
-            <p>Здесь могла быть ваша реклама</p>
-        </aside>
-        <footer>
-            <p>Копирайт</p>
-        </footer>     
+        </div>       
+    </main>        
+    <footer>
+        <p>Копирайт</p>
+    </footer>
+<script src='script.js'></script>
 </body>
 </html>

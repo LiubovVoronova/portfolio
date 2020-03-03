@@ -1,31 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
 body {
     margin: 0;
-    padding: 0;
-    height: 100vh;
+    padding: 0;    
+    height: 100vh;        
+    min-width: 320px;
+    font-family: 'Poiret One', Arial, sans-serif;
 }
 .grid-container {
     display: grid;
     grid-template-areas: "header header header header header"
-                         "main main main main sidebar"
-                         "main main main main sidebar"
+                         "main main main main main"                         
                          "footer footer footer footer footer";
     grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 40% 40% 10%;
+    grid-template-rows: fit-content auto 20px;
     
 }
 header {
-    grid-area: header;
-    background-color: lightcoral;
+    grid-area: header;    
+    background: url(images/birds_header.jpg) no-repeat left top;
+    background-size: cover;        
+    width: 100%;
 }
 main {
-    grid-area: main;
-    background-color: lightgreen;
+    grid-area: main;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
 }
 aside {
     grid-area: sidebar;
-    background-color: lightgoldenrodyellow;
+    background-color: rgba(250, 160, 132, 0.5);
 }
 footer {
     grid-area: footer;
-    background-color: lightskyblue;
+    background-color: rgba(140, 140, 140, 0.5);
+}
+
+/* MAIN MENU */
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.main-menu {        
+    grid-column: 1 / 6;
+    height: 10vh;
+    background-color: lightgray;     
+    font-size: 2vw;
+    font-weight: bold;
+}
+.main-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;        
+    align-items: center;
+}
+.main-menu li {    
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s ease-in;
+    margin: 0 3% 0 0;  
+    display: inline-block;  
+    position: relative;  
+    padding-top: 2%;
+}
+
+.main-menu li:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+ul.sub-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 1.8vw;    
+    padding-top: 2%;    
+    visibility: hidden;    
+}
+ul.show-sub {
+    visibility: visible;
+}
+
+.sub-menu li {
+    padding: 2% 0 0 10%;
+    margin: 5% 0 3% 0;    
+    width: 9vw;
+    border-radius: 10%;    
+    border: none;
+}
+.sub-menu {
+    margin-top: 5%;
+    background-color: lightgray;
+    border-radius: 5%;
+}
+.sub-menu li:hover, .sub-menu a:hover {
+    color: #383838;
+    border: none;
+}
+/* LOGO */
+.logo {
+    float: left;
+    font-family: "Caveat", Arial, sans-serif;
+    font-size: 2.5vw;
+    text-align: right;
+    padding-left: 5%;
 }
