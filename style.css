@@ -6,7 +6,7 @@ body {
     padding: 0;    
     height: 100vh;        
     min-width: 320px;
-    font-family: 'Poiret One', Arial, sans-serif;
+    font-family: 'Poiret One', 'Times New Roman', Times, serif;
 }
 .grid-container {
     display: grid;
@@ -27,7 +27,7 @@ main {
     grid-area: main;    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 10vh auto;
 }
 aside {
     grid-area: sidebar;
@@ -35,7 +35,7 @@ aside {
 }
 footer {
     grid-area: footer;
-    background-color: rgba(140, 140, 140, 0.5);
+    background-color: rgba(140, 140, 140, 0.5);    
 }
 
 /* MAIN MENU */
@@ -107,8 +107,82 @@ ul.show-sub {
 /* LOGO */
 .logo {
     float: left;
-    font-family: "Caveat", Arial, sans-serif;
+    font-family: "Caveat", 'Times New Roman', Times, serif;
     font-size: 2.5vw;
     text-align: right;
     padding-left: 5%;
+}
+
+/* PHOTO */
+.photo {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    background-color: bisque;
+    width: 100%;
+    
+}
+
+footer > p {
+    padding-left: 10%;
+}
+
+/* WEATHER */
+.weather {
+    display: block;
+    float: right;
+    position: relative;
+    top: 50%;
+    right: 2%;
+    width: 10vw;        
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5%;    
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+.weather h4 {
+    margin: 5% 0 0 0;        
+}
+.weather img {
+    margin: 0;
+}
+@media screen and (max-width: 450px) {
+    .weather {
+        top: 30%;
+    }
+    .weather img {
+        width: 35px;
+    }
+    div.social {
+        top: 10%;
+        left: 5%;
+    }
+    .social img {        
+        width: 25px;
+    }
+}
+.weather p {
+    margin: 0;
+}
+p.degrees {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 1.1vw;
+    margin-bottom: 4%;
+    color: #474747;
+}
+.weather p:last-child {
+    margin-bottom: 10%;
+}
+
+/* SOCIAL-MEIA LINKS */
+.social {
+    display: inline-block;
+    position: relative;
+    top: 70%;
+    left: -30%;   
+    width: 300px;     
+}
+.social a, .social img {
+    margin: 0 5px 0 5px;
 }
