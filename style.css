@@ -7,6 +7,7 @@ body {
     height: 100vh;        
     min-width: 320px;
     font-family: 'Poiret One', 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 .grid-container {
     display: grid;
@@ -22,12 +23,14 @@ header {
     background: url(images/birds_header.jpg) no-repeat left top;
     background-size: cover;        
     width: 100%;
+    height: 35vh;
 }
 main {
     grid-area: main;    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10vh auto;
+    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 1fr;
+    grid-template-rows: 10vh auto auto auto;
+    font-size: 18px;
 }
 aside {
     grid-area: sidebar;
@@ -55,20 +58,23 @@ a {
     background-color: lightgray;     
     font-size: 2vw;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 .main-menu ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;        
-    align-items: center;
+    justify-content: flex-end;
 }
 .main-menu li {    
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s ease-in;
-    margin: 0 3% 0 0;  
+    margin: 0 10% 0 0;  
     display: inline-block;  
     position: relative;  
-    padding-top: 2%;
+    padding-top: 0;    
 }
 
 .main-menu li:hover {
@@ -91,7 +97,7 @@ ul.show-sub {
 .sub-menu li {
     padding: 2% 0 0 10%;
     margin: 5% 0 3% 0;    
-    width: 9vw;
+    width: 10vw;
     border-radius: 10%;    
     border: none;
 }
@@ -108,7 +114,7 @@ ul.show-sub {
 .logo {
     float: left;
     font-family: "Caveat", 'Times New Roman', Times, serif;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     text-align: right;
     padding-left: 5%;
 }
@@ -116,14 +122,22 @@ ul.show-sub {
 /* PHOTO */
 .photo {
     grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    background-color: bisque;
-    width: 100%;
+    grid-column: 1 / 2;    
+    margin: 5% 5% 5% 10%;
     
 }
+.photo img {    
+    border-radius: 5%;
+}
 
+/* FOOTER */
 footer > p {
-    padding-left: 10%;
+    padding-left: 5%;
+    display: inline-block;
+}
+footer > a {
+    margin-left: 5%;
+    text-decoration: underline #757575;
 }
 
 /* WEATHER */
@@ -131,7 +145,7 @@ footer > p {
     display: block;
     float: right;
     position: relative;
-    top: 50%;
+    top: 25%;
     right: 2%;
     width: 10vw;        
     background-color: rgba(255, 255, 255, 0.5);
@@ -148,7 +162,7 @@ footer > p {
 }
 @media screen and (max-width: 450px) {
     .weather {
-        top: 30%;
+        top: 20%;
     }
     .weather img {
         width: 35px;
@@ -159,6 +173,12 @@ footer > p {
     }
     .social img {        
         width: 25px;
+    }
+    .main-menu {
+        font-size: 4vw;
+    }
+    ul.sub-menu {
+        font-size: 3vw;
     }
 }
 .weather p {
@@ -175,14 +195,47 @@ p.degrees {
     margin-bottom: 10%;
 }
 
-/* SOCIAL-MEIA LINKS */
+/* SOCIAL-MEDIA LINKS */
 .social {
     display: inline-block;
     position: relative;
     top: 70%;
-    left: -30%;   
+    left: -15%;   
     width: 300px;     
 }
-.social a, .social img {
+.social a {
     margin: 0 5px 0 5px;
+}
+
+/* MAIN CONTENT */
+.my-info {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    padding-left: 10%;
+    margin-top: 10%;
+}
+.my-info-extended {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;    
+    margin-top: 10%;
+}
+.skills {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    padding-left: 10%;
+}
+.skills-extended {
+    grid-column: 4 / 6;
+    grid-row: 3 / 4;
+}
+.features {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+    padding-left: 10%;
+    margin-bottom: 10%;
+}
+.fetures-extended {
+    grid-column: 4 / 6;
+    grid-row: 4 / 5;
+    margin-bottom: 10%;
 }
