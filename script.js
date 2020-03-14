@@ -2,18 +2,29 @@
 
 // MENU-DROPDOWN
 document.addEventListener('click', function(event) {
-    let target = event.target; 
-    let subMenuList = document.querySelectorAll('ul.sub-menu');    
-    if (target.closest('.menu-item')) {
+    let target = event.target;     
+    let subMenuList = document.querySelectorAll('ul.sub-menu'); 
+    let menuItemList = document.querySelectorAll('.menu-item');                  
+    if (target.closest('.menu-item') && target.classList.contains('arrow-down')) {
         closeMenu();
-        target.querySelector('ul.sub-menu').style.visibility = "visible";
+        target.querySelector('ul.sub-menu').style.visibility = "visible";        
+        target.classList.toggle("arrow-down");
+        target.classList.toggle("arrow-up");
         } else {
             closeMenu();
         }
     function closeMenu() {
         for (let i = 0; i < subMenuList.length; i++) {
-            subMenuList[i].style.visibility = "hidden";
-        }
+            subMenuList[i].style.visibility = "hidden";                   
+        }    
+        for (let j=0; j < menuItemList.length; j++) {  
+            if(menuItemList[j].classList.contains('arrow-up')) {
+                menuItemList[j].classList.toggle("arrow-up"); 
+                menuItemList[j].classList.toggle("arrow-down");
+            }          
+                                          
+        }   
+        
     }    
 });
 
