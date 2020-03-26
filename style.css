@@ -62,7 +62,7 @@ a {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22)
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 .main-menu ul {
     display: flex;
@@ -209,9 +209,9 @@ footer > a {
     margin: 0;
 }
 p.degrees {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     font-weight: lighter;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     margin-bottom: 4%;
     color: #474747;
 }
@@ -280,4 +280,178 @@ p.degrees {
     height: 0;
     border: none;
     border-bottom: 2px dotted #383838;
+}
+/* FORMS */
+.form-container {        
+    background-color: #dddddd;
+    border-radius: 5%;
+    margin: 5vh 5% 5vh 10%;
+    padding: 0 3vw 5vh 3vw;
+}
+.form-container h3 {
+    text-align: center;
+}
+.form-container .button {
+    vertical-align: middle;
+}
+.feedback {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;      
+    height: 250px;
+    width: 350px;
+    margin-left: 20%;
+}
+.good-mood {
+    grid-column: 3 / 6;
+    grid-row: 2 / 3;      
+    height: 250px;
+    width: 350px;      
+    margin-left: 20%;
+}
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;    
+    width: 300px;
+    height: 5px;    
+    outline: 0;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 1vh;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 1px 1px 1px #5f5f5f, 0px 0px 1px #a0a0a0;
+    background:  #dcc1bd;
+    border-radius: 1.3px;    
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #474747, 0px 0px 1px #a0a0a0;    
+    height: 3vh;
+    width: 1vw;
+    border-radius: 30%;
+    background: #cacaca;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 1vh;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 1px 1px 1px #5f5f5f, 0px 0px 1px #a0a0a0;
+    background:  #dcc1bd;
+    border-radius: 1.3px;    
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #474747, 0px 0px 1px #a0a0a0;    
+    height: 3vh;
+    width: 1vw;
+    border-radius: 30%;
+    background: #cacaca;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 300px;
+    height: 1vh;
+    cursor: pointer;
+    transition: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background:  #dcc1bd;    
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #5f5f5f, 0px 0px 1px #a0a0a0;
+  }
+  input[type=range]::-ms-fill-upper {
+    background:  #dcc1bd;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #5f5f5f, 0px 0px 1px #a0a0a0;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #474747, 0px 0px 1px #a0a0a0;    
+    height: 3vh;
+    width: 1vw;
+    border-radius: 30%;
+    background: #cacaca;
+    cursor: pointer;
+  }
+.error {
+    border: 1px solid #8c0415;
+}
+.value {
+    margin-bottom: 5%;
+    position: relative;
+    transform-origin: center center;
+    display: block;    
+    background: transparent;    
+    padding-left: 3px;    
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #3b3b3b;    
+}
+.value::after {
+    content: "  ";
+    display: block;
+    position: relative;
+    left: -2.2%;
+    margin-top: -25px;
+    width: 25px;
+    height: 25px;
+    border: 1px dotted gray;
+    border-radius: 50%;
+}
+form > label > p {
+    margin-bottom: 2%;
+}
+/* MODAL */
+.modal {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    width: 620px;
+    height: 420px;
+    background-color: white;
+    left: 30%;
+    top: 20%;
+}
+.close {    
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;    
+    background: url(images/close.svg) no-repeat;
+    border: none;
+    margin: 12px 12px 0 0;
+}
+.overlay {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200, 200, 200, 0.5);
+    display: none;
+    filter: blur(10px);
+}
+.open {
+    display: block;    
+}
+.card-picture {
+    margin: -33px 10px 10px 10px;
+}
+/* BUTTONS */
+.button {
+    background-color: #dcc1bd;
+    box-shadow: none;    
+    height: 5vh;
+    width: 8vw;
+    margin-top: 5%;
 }
