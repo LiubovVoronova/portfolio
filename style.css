@@ -56,7 +56,7 @@ a {
     grid-column: 1 / 6;
     height: 10vh;
     background-color: lightgray;     
-    font-size: 2vw;
+    font-size: 1.5em;
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -117,7 +117,7 @@ a {
     display: block;
     position: relative;
     left: 100%;
-    bottom: 60%;     
+    bottom: 65%;     
     margin-left: 5%;
 }
 ul.sub-menu {
@@ -125,7 +125,7 @@ ul.sub-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    font-size: 1.8vw;    
+    font-size: 0.9em;    
     padding-top: 2%;    
     visibility: hidden;    
 }
@@ -163,11 +163,11 @@ ul.show-sub {
 .photo {
     grid-row: 2 / 3;
     grid-column: 1 / 2;    
-    margin: 12% 5% 5% 10%;
+    margin: 15% auto;
     
 }
 .photo img {    
-    border-radius: 5%;    
+    border-radius: 5%;       
 }
 
 /* FOOTER */
@@ -183,16 +183,14 @@ footer > a {
 /* WEATHER */
 .weather {
     display: block;
-    float: right;
-    position: relative;
-    top: 20%;
-    right: 2%;
-    width: 10vw;        
-    background-color: rgba(255, 255, 255, 0.5);
+    margin: 30% auto;    
+    width: 170px;        
+    background-color: lightgray;
     border-radius: 5%;    
-    font-size: 1.1vw;
+    font-size: 1em;
     font-weight: bold;
     text-align: center;
+    padding: 5%;    
 }
 .weather h4 {
     margin: 5% 0 0 0;        
@@ -231,9 +229,7 @@ p.degrees {
     margin-bottom: 4%;
     color: #474747;
 }
-.weather p:last-child {
-    margin-bottom: 10%;
-}
+
 
 /* SOCIAL-MEDIA LINKS */
 .social {
@@ -552,7 +548,8 @@ input, input:active, input:focus {
     margin: 0 0 0 3vw;
     display: block;    
     background-color: #dcc1bd; 
-    height: 525px;       
+    height: 525px;      
+    font-size: larger; 
 }
 .small-photo-container {
     grid-column: 1 / 6;
@@ -569,14 +566,73 @@ input, input:active, input:focus {
     margin-left: 10px;
 }
 .small:hover {
-    background-color: rgb(223, 223, 223, 0.2);
+    transform: translateY(-10px) scale(1.1);
 }
 .search-pannel h3 {
     text-align: center;
 }
 .search-pannel button {
-    margin: 2vh 0 5vh 10vw;
+    margin: 2vh 0 5vh 11vw;
 }
 #categories, #words {
     margin: 10%;
+}
+input[type=search] {
+    width: 20vw;
+    height: 5vh;
+    font-size: 0.8em;    
+}
+select {
+    width: 11vw;
+    height: 5vh;
+    font-size: 0.8em;
+}
+.error-message {
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    width: 150px;
+    height: 30px;
+    border: 1px solid gray;
+    text-align: center;
+}
+.search-pannel hr {
+    margin: 0 10%;
+    height: 0;
+    border: none;
+    border-bottom: 2px dotted #383838;
+}
+
+/* CLOCK */
+.clock {
+    display: block;
+    float: right;
+    width: 10vw;
+    height: 10vh;
+    background-color: rgba(201, 201, 201, 0.5);
+    border-radius: 10%;
+    margin: 10% 5%;    
+}
+.time {    
+    font-size: 2em;  
+    margin: 5% 0 3% 20%;  
+}
+.clock button {    
+    background: rgba(0,0,0,0);    
+    border: none;    
+    padding: 0;
+    margin-left: 5%;
+    height: 30px;
+}
+.clock button:active {
+    transform: scale(0.9); 
+    box-shadow: inset 2px 2px 1px gray;       
+    border: none;
+}
+.clock button:first-of-type {
+    margin-left: 27%;
+}
+.clock img {
+    width: 30px;
 }
