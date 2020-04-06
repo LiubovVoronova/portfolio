@@ -37,10 +37,10 @@ function updateClock() {
     let minutes = date.getMinutes();
     if (minutes < 10) minutes = "0" + minutes;
     let seconds = date.getSeconds();    
-    if (seconds < 10) seconds = "0" + hours; 
+    if (seconds < 10) seconds = "0" + seconds; 
     clockContainer.querySelector('.time').innerHTML = hours + ':' + minutes + ':' + seconds;
     
-// }
+}
 
 let time;
 function startClock() {
@@ -53,7 +53,15 @@ function stopClock() {
 
 startClock();
 
-let go = clockContainer.querySelector('.go');
-go.onclick = startClock;
-let stopCl = clockContainer.querySelector('.stop');
-stopCl.onclick = stopClock;
+let clockButton = document.getElementById('btn-clock');
+clockButton.onclick = function() {
+    if (clockButton.classList.contains('stop')) {
+        clockButton.classList.remove('stop');
+        clockButton.classList.add('go');
+        stopClock();
+    } else {
+        clockButton.classList.remove('go');
+        clockButton.classList.add('stop');
+        startClock();
+    }    
+};

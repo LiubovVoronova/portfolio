@@ -28,7 +28,7 @@ function getPhotos(searchWord) {
             bigImage.alt = myPictures.results[9].alt_description;
             Bigphoto.append(bigImage);
             
-            let smallPhotoCount = Math.floor(document.documentElement.clientWidth / 200);        
+            let smallPhotoCount = Math.floor(document.documentElement.clientWidth / 220);        
             
             for (let i=0; i < smallPhotoCount; i++) {
                 let smallImage = document.createElement('img');
